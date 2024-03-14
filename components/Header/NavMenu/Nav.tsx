@@ -14,7 +14,7 @@ export const Nav:FC<NavigationPropsType> = ({items}) => {
     const menuButtonHandler = () => {
         setOpenMenu(prev => !prev)
     }
-    const [activeLink, setActiveLink] = useState('about');
+    const [activeLink, setActiveLink] = useState('welcome');
     const [isScrolled, setIsScrolled] = useState(false);
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId);

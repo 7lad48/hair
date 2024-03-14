@@ -1,0 +1,11 @@
+.button{
+  display: inline-block;
+  background: black;
+  padding: 10px 25px;
+  transition: 0.3s;
+
+  &:hover {
+    background: rgba(164, 149, 126, 0.91);
+  }
+
+}

@@ -4,7 +4,7 @@ import styles from './Header.module.scss'
 import Logo from "@/components/Header/Logo";
 
 const navItems = [
-    {name: 'About me', href: 'about'},
+    {name: 'Обо мне', href: 'welcome'},
     {name: 'Features', href: 'features'},
     {name: 'Price', href: 'price'},
     {name: 'Testimonials', href: 'testimonials'},
