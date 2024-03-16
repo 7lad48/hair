@@ -56,6 +56,7 @@ export const Nav:FC<NavigationPropsType> = ({items}) => {
                 {items.map( (item: NavItemType) => {
                     const menuItemOnClickHandler = () => {
                         scrollToSection(item.href);
+                        setOpenMenu(false);
                     }
                     return <li key={item.name} className={styles.navItem} onClick={menuItemOnClickHandler}>
                         <button className={`${styles.navBtn} ${activeLink === item.href ? styles.activeMenuLink : ''}`}>{item.name}</button>
