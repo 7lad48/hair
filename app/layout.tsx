@@ -5,6 +5,7 @@ import {Header} from "@/components/Header/Header";
 import {Footer} from "@/components/Footer/Footer";
 import {Welcome} from "@/components/Welcome/Welcome";
 import {Services} from "@/components/Services/Services";
+import {Contacts} from "@/components/Contacts/Contacts";
 
 // import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({
       <Welcome/>
       <Services/>
       {children}
+      <Contacts/>
       <Footer/>
       </body>
     </html>

@@ -1,49 +1,66 @@
 @mixin adaptive-font($pcSize, $mobSize, $maxWidth) {
   $addSize: $pcSize - $mobSize;
   $addMobSize: $pcSize + $mobSize * 0.7;
-  @media (max-width: 767px) {font-size: calc(#{$mobSize}px + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));}
-  @media (min-width: 768px) {font-size: calc(#{$mobSize}px + #{$addSize} * (100vw / #{$maxWidth}));}
-  @media (min-width: #{$maxWidth}px) {font-size: #{$pcSize}px;}
+  @media (max-width: 767px) {
+    font-size: calc(#{$mobSize}px + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+  @media (min-width: 768px) {
+    font-size: calc(#{$mobSize}px + #{$addSize} * (100vw / #{$maxWidth}));
+  }
+  @media (min-width: #{$maxWidth}px) {
+    font-size: #{$pcSize}px;
+  }
 }
-.welcome{
+
+.welcome {
   margin-top: 60px;
-  background: rgb(66,57,58);
-  background: linear-gradient(98deg, rgba(66,57,58,1) 0%, rgba(122,117,115,1) 42%, rgba(108,95,90,1) 100%);
+  background: rgb(66, 57, 58);
+  background: linear-gradient(98deg, rgba(66, 57, 58, 1) 0%, rgba(122, 117, 115, 1) 42%, rgba(108, 95, 90, 1) 100%);
   height: 650px;
   position: relative;
-  .welcome_contentWrapper{
+
+  .welcome_contentWrapper {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: 20px;
-    .welcome__info{
+
+    .welcome__info {
       color: white;
       align-self: center;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       gap: 25px;
-      .welcome__infoTitle{
+
+      .welcome__infoTitle {
         @include adaptive-font(85, 45, 1360);
       }
-      .welcome__infoSubtitle{
+
+      .welcome__infoSubtitle {
         @include adaptive-font(42, 20, 1360);
       }
     }
-    .welcome__picture{
 
+    .welcome__picture {
+      filter: drop-shadow(5px 5px 10px rgba(45, 45, 45, 0.8))
     }
   }
 }
+
 @media (max-width: 767px) {
-    .welcome__info{
-      position: absolute;
-      padding: 10px 20px 10px 15px;
-      left:0;
-      bottom: 80px;
-      background-color: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(15px);
-      border-radius: 0 150px 150px 0;
-    }
+  .welcome__info {
+    position: absolute;
+    padding: 10px 20px 10px 15px;
+    left: 0;
+    bottom: 80px;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-radius: 0 150px 150px 0;
+    z-index: 2;
+  }
+  .welcome__picture{
+
+  }
 }
