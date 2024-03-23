@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "./null.css";
-import "./globals.css";
+import "./globals.scss";
 import {Header} from "@/components/Header/Header";
 import {Footer} from "@/components/Footer/Footer";
 import {Welcome} from "@/components/Welcome/Welcome";
 import {Services} from "@/components/Services/Services";
 import {Contacts} from "@/components/Contacts/Contacts";
+import {About} from "@/components/About/About";
 
 // import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body /*className={inter.className}*/>
       <Header/>
       <Welcome/>
+      <About/>
       <Services/>
       {children}
       <Contacts/>
