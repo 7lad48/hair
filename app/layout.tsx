@@ -7,6 +7,7 @@ import {Welcome} from "@/components/Welcome/Welcome";
 import {Services} from "@/components/Services/Services";
 import {Contacts} from "@/components/Contacts/Contacts";
 import {About} from "@/components/About/About";
+import {ImagesCarousel} from "@/components/ImagesCarousel/ImagesCarousel";
 
 // import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
@@ -29,6 +30,7 @@ export default function RootLayout({
       <About/>
       <Services/>
       {children}
+      <ImagesCarousel speed={200} numOfImg={20}/>
       <Contacts/>
       <Footer/>
       </body>
