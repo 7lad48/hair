@@ -5,7 +5,7 @@ import Logo from "@/components/Header/Logo";
 
 const navItems = [
     {name: 'Обо мне', href: 'welcome'},
-    {name: 'Features', href: 'features'},
+    {name: 'Услуги', href: 'services'},
     {name: 'Price', href: 'price'},
     {name: 'Testimonials', href: 'testimonials'},
     {name: 'Contact', href: 'contact'},

@@ -2,6 +2,7 @@
 import React, {FC} from 'react';
 import Link from "next/link";
 import {usePathname} from "next/navigation";
+import styles from './Services.module.scss'
 
 export type ServicesItemType = {
     name: string
@@ -16,11 +17,11 @@ export const ServicesNavigation:FC<ServicesPropsType> = (props) => {
     } = props
     const pathname = usePathname()
     return (
-        <nav>
+        <nav className={styles.navigation}>
             {services.map(service => {
                 const isActive = pathname === service.route || pathname.startsWith(`${service.route}/`)
                 return <Link key={service.name} href={service.route}
-                             className={`link ${isActive ? 'active' : ''}`}>{service.name}</Link>
+                             className={`${styles.link} ${isActive ? `${styles.active}` : ''}`}>{service.name}</Link>
             })}
         </nav>
     );
