@@ -17,7 +17,7 @@ const about = {
 export const About = () => {
     return (
         <section className={'wrapper'}>
-            <h3 className={`title ${styles.title}`}>Знакомство <span className={styles.titleIcon}>👇🏻</span></h3>
+            <h3 className={`title ${styles.title}`}>Знакомство</h3>
             <div className={styles.content}>
                 <div className={styles.picture}>
                     <Image

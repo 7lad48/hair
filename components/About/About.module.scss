@@ -1,9 +1,7 @@
 .title{
   position: relative;
   margin-top: 95px;
-  .titleIcon{
-    font-size: 25px;
-  }
+
   &:before, &:after{
     content: '';
     display: block;
