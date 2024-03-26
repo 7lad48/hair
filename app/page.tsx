@@ -39,8 +39,8 @@ export default function Home() {
         };
     return (
         <div className={`wrapper accordionItems`}>
-            <p>{careState.headInfo}</p>
-            <p>{careState.info}</p>
+            <p className={'accordionInfo'}>{careState.headInfo}</p>
+            <p className={'accordionInfo'}>{careState.info}</p>
             {
                 careState.cares.map((care, index) => {
                     const isExpanded = expanded === `panel${index}`;
