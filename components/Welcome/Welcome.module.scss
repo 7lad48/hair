@@ -23,11 +23,12 @@
       gap: 25px;
 
       .welcome__infoTitle {
-        @include adaptive-font(85, 45, 1360);
+        @include adaptive-font(80, 36, 1360);
       }
 
       .welcome__infoSubtitle {
-        @include adaptive-font(42, 20, 1360);
+        @include adaptive-font(40, 26, 1360);
+        max-width: 530px;
       }
     }
 

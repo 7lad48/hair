@@ -4,8 +4,8 @@ import Image from "next/image";
 import Photo from '../../assets/images/Welcome/welcomePicture.png'
 import { Button } from '../Button/Button';
 const welcomeData = {
-    title: 'Main title',
-    subtitle: 'Any subtitle text or description',
+    title: 'Уход для волос',
+    subtitle: 'Индивидуальный подбор',
     buttonTitle: 'Кнопка',
 }
 export const Welcome = () => {

@@ -1,13 +1,16 @@
 @import "app/globals";
 .services{
   margin-top: 110px;
-  @include adaptive-font(26, 18, 1360);
+  @include adaptive-font(30, 20, 1360);
 }
 .navigation{
-  margin-top: 40px;
-  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+.navigationWrapper{
+  margin: 40px auto;
   padding: 5px;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 1);
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -17,7 +20,7 @@
     padding: 10px 15px;
     border-radius: 10px;
     color: white;
-    transition: all  ease-in 0.2s;
+    transition: all ease-in 0.2s;
   }
 }
 .link.active{
