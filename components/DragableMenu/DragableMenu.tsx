@@ -6,6 +6,8 @@ import {motion} from 'framer-motion';
 type CareType = {
     name: string
     description: string
+    imageBefore: string
+    imageAfter: string
 }
 type PropsType = {
     cares: CareType[]
@@ -13,13 +15,16 @@ type PropsType = {
 export const DragableMenu = ({cares}: PropsType) => {
     const carousel = useRef(null);
     return (
-        <motion.div className={styles.carousel} ref={carousel}>
+        <motion.div className={styles.carousel} ref={carousel} whileTap={{cursor: 'grabbing'}}>
             <motion.div drag='x' dragConstraints={carousel} className={styles.innerCarousel}>
             {
                 cares.map((care, index) => {
                     return <div className={styles.carouselItem}>
-                        {care.name}
-                        <button onClick={()=>{alert('clicked:' + index)}}>Click me</button>
+                        <img src={care.imageAfter} alt="service image"/>
+                        <div className={styles.carouselItem__info}>
+                            <p>{care.name}</p>
+                            <button onClick={()=>{alert('clicked:' + index)}} className={styles.carouselItem__button}>Подробнее</button>
+                        </div>
                     </div>
                 })
             }
