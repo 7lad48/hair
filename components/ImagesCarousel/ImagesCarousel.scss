@@ -17,6 +17,8 @@
     object-fit: cover;
     padding: 0 10px;
     cursor: default;
+    border-radius: 30px;
+    pointer-events: none;
   }
 }
 
