@@ -2,13 +2,14 @@
 // import Image from "next/image";
 import "./page.scss";
 import * as React from 'react';
-import Accordion from '@mui/material/Accordion';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Image from "next/image";
+// import Accordion from '@mui/material/Accordion';
+// import AccordionDetails from '@mui/material/AccordionDetails';
+// import AccordionSummary from '@mui/material/AccordionSummary';
+// import Typography from '@mui/material/Typography';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import Image from "next/image";
 import {DragableMenu} from "@/components/DragableMenu/DragableMenu";
+
 
 const careState = {
     headInfo: 'Салонный уход выполняется при помощи косметических (гиппоаллергенных) средств, которые не тестируются на животных!',
@@ -80,13 +81,14 @@ const careState = {
 
 export default function Home() {
     return (
+        <>
         <div className={`wrapper accordionItems`}>
-
             <DragableMenu cares={careState.cares}/>
             <p className={'accordionInfo'}>{careState.headInfo}</p>
             <p className={'accordionInfo'}>{careState.info}</p>
             <p className={'accordionInfo'}>{careState.footerInfo}</p>
             <p className={'accordionInfo'}>{careState.footerInfo2}</p>
         </div>
+        </>
     );
 }

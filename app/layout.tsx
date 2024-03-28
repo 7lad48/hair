@@ -9,6 +9,7 @@ import {Services} from "@/components/Services/Services";
 import {Contacts} from "@/components/Contacts/Contacts";
 import {About} from "@/components/About/About";
 import {ImagesCarousel} from "@/components/ImagesCarousel/ImagesCarousel";
+import * as React from "react";
 
 // import { Inter } from "next/font/google";
 // const inter = Inter({ subsets: ["latin"] });
